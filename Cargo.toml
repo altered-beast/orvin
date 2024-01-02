@@ -5,12 +5,16 @@ edition = "2021"
 license = "AGPL-3.0-or-later"
 
 [features]
-# Enables a testin command that does nothing for development purposes (likely temporary)
+# Feature to enable all of the features useful in development
+dev = ["test-command", "bevy/dynamic_linking"]
+
+# Enables a testing command that does nothing for development purposes (likely temporary)
 test-command = []
 
 [dependencies]
 async-trait = "0.1.75"
 bevy = "0.12.1"
+chrono = "0.4.31"
 crossterm = { version = "0.27.0", features = ["event-stream"] }
 futures = "0.3.29"
 itertools = "0.12.0"
